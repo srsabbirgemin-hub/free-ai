@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>জিজ্ঞাসা AI – বাংলা ও ইংরেজিতে ফ্রি AI চ্যাট | Jiggasha AI</title>
+<meta name="description" content="বাংলা ও ইংরেজিতে যেকোনো প্রশ্ন করুন, সঙ্গে সঙ্গে উত্তর পান। Ask anything in Bangla or English and get instant answers.">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1297210509163795"
+     crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF3F8; --surface:#FFFFFF; --ink:#12213B; --muted:#5B6B83; --line:#D6DFEA;
+  --accent:#0E8F7E; --accent-ink:#FFFFFF; --user:#12213B; --user-ink:#FFFFFF; --ad:#E4EBF3;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0D1524; --surface:#16213A; --ink:#E8EEF8; --muted:#97A7C2; --line:#27365A;
+  --accent:#2CC4AF; --accent-ink:#06201B; --user:#2CC4AF; --user-ink:#06201B; --ad:#1B2845;}
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Hind Siliguri",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:auto;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.logo{font-weight:700;font-size:1.35rem;letter-spacing:-.01em;margin-right:auto}
+.logo span{color:var(--accent)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{border:0;background:none;color:var(--muted);padding:6px 14px;font:inherit;font-size:.95rem;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+main{max-width:1080px;margin:auto;padding:16px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
+@media(max-width:860px){main{grid-template-columns:1fr}.side{display:none}}
+.ad{background:var(--ad);border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:.8rem;text-align:center;display:flex;align-items:center;justify-content:center;min-height:90px;overflow:hidden}
+.ad.tall{min-height:600px}
+.chat{background:var(--surface);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;min-height:60vh}
+.hello{padding:28px 20px 8px}
+.hello h1{font-size:clamp(1.6rem,4.5vw,2.3rem);line-height:1.2;margin:0 0 8px;letter-spacing:-.02em}
+.hello p{margin:0;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 20px 4px}
+.chips button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:.95rem;cursor:pointer}
+.chips button:hover{border-color:var(--accent)}
+#log{flex:1;padding:12px 20px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;word-wrap:break-word;overflow-wrap:anywhere}
+.msg.me{align-self:flex-end;background:var(--user);color:var(--user-ink);border-bottom-right-radius:4px}
+.msg.ai{align-self:flex-start;background:var(--bg);border-bottom-left-radius:4px}
+.msg.err{background:#FCE8E6;color:#8A1C12}
+form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+textarea{flex:1;resize:none;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:10px 12px;font:inherit;max-height:140px}
+.send{border:0;background:var(--accent);color:var(--accent-ink);border-radius:10px;padding:0 20px;font:inherit;font-weight:600;cursor:pointer}
+.send:disabled{opacity:.5;cursor:wait}
+.slot{margin:16px 0}
+.info{max-width:1080px;margin:0 auto;padding:8px 16px 24px;color:var(--muted);font-size:.95rem}
+.info h2{color:var(--ink);font-size:1.1rem;margin:20px 0 4px}
+footer{border-top:1px solid var(--line);background:var(--surface);text-align:center;padding:16px;color:var(--muted);font-size:.9rem}
+footer a{margin:0 8px}
+@media(prefers-reduced-motion:no-preference){.dots span{animation:b 1s infinite}.dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}}
+@keyframes b{50%{opacity:.2}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <div class="logo">জিজ্ঞাসা<span> AI</span></div>
+  <div class="lang" role="group" aria-label="Language">
+    <button id="l-bn" aria-pressed="true">বাংলা</button>
+    <button id="l-en" aria-pressed="false">English</button>
+  </div>
+</div></header>
+
+<main>
+  <section>
+    <!-- বিজ্ঞাপন ১: ওপরের Display ad -->
+    <div id="ad-top">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1297210509163795"
+           data-ad-slot="2590567877"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="chat slot">
+      <div class="hello">
+        <h1 data-t="title"></h1>
+        <p data-t="sub"></p>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div id="log" aria-live="polite"></div>
+      <form id="f">
+        <textarea id="q" rows="1" required></textarea>
+        <button class="send" id="go" type="submit"></button>
+      </form>
+    </div>
+
+    <!-- বিজ্ঞাপন ২: চ্যাটের নিচে (আপনার In-feed ad unit) -->
+    <div id="ad-bottom">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-format="fluid"
+           data-ad-layout-key="-fb+5w+4e-db+86"
+           data-ad-client="ca-pub-1297210509163795"
+           data-ad-slot="2686770795"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </section>
+
+  <aside class="side">
+    <!-- বিজ্ঞাপন ৩: ডেস্কটপে পাশের লম্বা বিজ্ঞাপন -->
+    <div class="ad tall" id="ad-side">Advertisement</div>
+  </aside>
+</main>
+
+<div class="info">
+  <h2 id="about" data-t="aboutH"></h2>
+  <p data-t="aboutP"></p>
+  <h2 id="privacy" data-t="privH"></h2>
+  <p data-t="privP"></p>
+  <h2 id="contact" data-t="contH"></h2>
+  <p data-t="contP"></p>
+</div>
+
+<footer>
+  <a href="#about" data-t="fAbout"></a><a href="#privacy" data-t="fPriv"></a><a href="#contact" data-t="fCont"></a>
+  <div>© 2026 Jiggasha AI</div>
+</footer>
+
+<script>
+/* ========= সেটিংস (এখানে বদলান) ========= */
+const API_KEY = "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"; // Groq API key
+const MODEL = "llama-3.3-70b-versatile";      // মডেলের নাম পরে বদলাতে পারেন
+const CONTACT_EMAIL = "you@example.com";      // আপনার ইমেইল দিন
+/* ======================================== */
+
+const T = {
+  bn:{
+    title:"যা জানতে চান, জিজ্ঞাসা করুন",
+    sub:"বাংলা বা ইংরেজি, যেকোনো ভাষায় লিখুন। উত্তর পাবেন সঙ্গে সঙ্গে।",
+    ph:"এখানে আপনার প্রশ্ন লিখুন…", send:"পাঠান", wait:"ভাবছি",
+    chips:["ঘরে বসে আয়ের ৫টি উপায় কী?","একটি ভালো সিভি কীভাবে লিখব?","Explain AI in simple Bangla","আমার জন্য একটি ইমেইল লিখে দাও"],
+    err:"উত্তর আনা যায়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।",
+    nokey:"সাইটের মালিক এখনো API কী বসাননি। কোডের ওপরে API_KEY ঠিক করুন।",
+    aboutH:"আমাদের সম্পর্কে",
+    aboutP:"জিজ্ঞাসা AI একটি বিনামূল্যের চ্যাট সাইট। এখানে বাংলা ও ইংরেজিতে প্রশ্ন করে পড়াশোনা, লেখা, কাজ ও দৈনন্দিন বিষয়ে সাহায্য পাওয়া যায়।",
+    privH:"গোপনীয়তা নীতি",
+    privP:"আপনার লেখা প্রশ্ন উত্তর তৈরির জন্য একটি AI সেবায় পাঠানো হয়। আমরা আপনার নাম বা পাসওয়ার্ড চাই না, তাই ব্যক্তিগত তথ্য লিখবেন না। এই সাইটে Google AdSense-সহ তৃতীয় পক্ষের বিজ্ঞাপন দেখানো হতে পারে। Google ও তার অংশীদাররা আপনার আগ্রহ অনুযায়ী বিজ্ঞাপন দেখাতে কুকি ব্যবহার করে। Google-এর বিজ্ঞাপন সেটিংস থেকে আপনি ব্যক্তিগতকৃত বিজ্ঞাপন বন্ধ করতে পারেন।",
+    contH:"যোগাযোগ", contP:"মতামত বা অভিযোগ জানাতে ইমেইল করুন: ",
+    fAbout:"সম্পর্কে", fPriv:"গোপনীয়তা নীতি", fCont:"যোগাযোগ"
+  },
+  en:{
+    title:"Ask anything. Get an answer now.",
+    sub:"Write in Bangla or English. Replies arrive in seconds.",
+    ph:"Type your question here…", send:"Send", wait:"Thinking",
+    chips:["5 ways to earn from home","How do I write a good CV?","বাংলায় সহজ করে AI বুঝিয়ে দাও","Write an email for me"],
+    err:"Couldn’t get a reply. Check your connection and try again.",
+    nokey:"The site owner hasn’t added an API key yet. Set API_KEY at the top of the code.",
+    aboutH:"About",
+    aboutP:"Jiggasha AI is a free chat site. Ask questions in Bangla or English for help with study, writing, work and everyday topics.",
+    privH:"Privacy Policy",
+    privP:"Your messages are sent to an AI service to generate replies. We don’t ask for your name or password, so please don’t type personal details. This site may show third-party ads, including Google AdSense. Google and its partners use cookies to show ads based on your interests. You can turn off personalized ads in Google’s Ads Settings.",
+    contH:"Contact", contP:"For feedback or complaints, email: ",
+    fAbout:"About", fPriv:"Privacy Policy", fCont:"Contact"
+  }
+};
+let lang = "bn", history = [];
+const $ = s => document.querySelector(s);
+const log = $("#log"), q = $("#q"), go = $("#go");
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el => el.textContent = t[el.dataset.t]);
+  $("#contact + p").textContent = t.contP;
+  const a = document.createElement("a"); a.href = "mailto:" + CONTACT_EMAIL; a.textContent = CONTACT_EMAIL;
+  $("#contact + p").appendChild(a);
+  q.placeholder = t.ph; go.textContent = t.send;
+  $("#l-bn").setAttribute("aria-pressed", lang==="bn"); $("#l-en").setAttribute("aria-pressed", lang==="en");
+  const c = $("#chips"); c.textContent = "";
+  t.chips.forEach(txt => { const b = document.createElement("button"); b.type="button"; b.textContent = txt; b.onclick = () => ask(txt); c.appendChild(b); });
+}
+$("#l-bn").onclick = () => { lang="bn"; render(); };
+$("#l-en").onclick = () => { lang="en"; render(); };
+
+function fmt(text){
+  const esc = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  return esc.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\n/g,"<br>");
+}
+function add(cls, html){
+  const d = document.createElement("div"); d.className = "msg " + cls; d.innerHTML = html;
+  log.appendChild(d); d.scrollIntoView({block:"end", behavior:"smooth"}); return d;
+}
+
+async function ask(text){
+  text = text.trim(); if(!text) return;
+  $("#chips").style.display = "none";
+  add("me", fmt(text)); q.value = ""; q.style.height = "auto";
+  const t = T[lang];
+  if(!API_KEY){ add("ai err", t.nokey); return; }
+  history.push({role:"user", content:text});
+  go.disabled = true;
+  const wait = add("ai", t.wait + ' <span class="dots"><span>●</span><span>●</span><span>●</span></span>');
+  try{
+    const r = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method:"POST",
+      headers:{"Content-Type":"application/json","Authorization":"Bearer "+API_KEY},
+      body:JSON.stringify({
+        model:MODEL,
+        messages:[{role:"system",content:"You are a helpful, friendly assistant on a bilingual site. Always reply in the same language the user writes in (Bangla or English). Keep answers clear and reasonably short."}].concat(history.slice(-12))
+      })
+    });
+    if(!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    const out = data.choices?.[0]?.message?.content || "";
+    if(!out) throw new Error("empty");
+    history.push({role:"assistant", content:out});
+    wait.innerHTML = fmt(out);
+  }catch(e){
+    history.pop();
+    wait.className = "msg ai err"; wait.textContent = t.err;
+  }finally{ go.disabled = false; q.focus(); }
+}
+
+$("#f").addEventListener("submit", e => { e.preventDefault(); ask(q.value); });
+q.addEventListener("keydown", e => { if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); $("#f").requestSubmit(); } });
+q.addEventListener("input", () => { q.style.height="auto"; q.style.height=q.scrollHeight+"px"; });
+render();
+</script>
+</body>
+</html>
